@@ -1,0 +1,42 @@
+<%= form_for(console) do |f| %>
+  <% if console.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(console.errors.count, "error") %> prohibited this console from being saved:</h2>
+
+      <ul>
+      <% console.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %>
+    <%= f.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= f.label :preco %>
+    <%= f.text_field :preco %>
+  </div>
+
+  <div class="field">
+    <%= f.label :midia %>
+    <%= f.text_field :midia %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fabricante %>
+    <%= f.text_field :fabricante %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lancamento %>
+    <%= f.date_select :lancamento %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

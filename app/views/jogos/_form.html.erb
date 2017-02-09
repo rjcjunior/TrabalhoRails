@@ -1,0 +1,44 @@
+
+<%= form_for(jogo) do |f| %>
+  <% if jogo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jogo.errors.count, "error") %> prohibited this jogo from being saved:</h2>
+
+      <ul>
+      <% jogo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %>
+    <%= f.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= f.label :preco %>
+    <%= f.text_field :preco %>
+  </div>
+
+  <div class="field">
+    <%= f.label :estilo %>
+    <%= f.text_field :estilo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :produtora %>
+    <%= f.text_field :produtora %>
+  </div>
+
+  <div class="field">
+
+    <%= f.label "Console" %>
+    <%= select("jogo", "console_id", Console.all.collect {|videogame| [ videogame.nome, videogame.id ] }, {prompt: 'Selecione o Console'})%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

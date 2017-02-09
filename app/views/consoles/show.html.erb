@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @console.nome %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @console.preco %>
+</p>
+
+<p>
+  <strong>Midia:</strong>
+  <%= @console.midia %>
+</p>
+
+<p>
+  <strong>Fabricante:</strong>
+  <%= @console.fabricante %>
+</p>
+
+<p>
+  <strong>Lancamento:</strong>
+  <%= @console.lancamento %>
+</p>
+
+<%= link_to 'Edit', edit_console_path(@console) %> |
+<%= link_to 'Back', consoles_path %>
