@@ -10,10 +10,29 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
+<table id="jogos_lists">
+<thead>
+  <tr>
+    <th>Nome do Jogo</th>
+    <th>Console</th>
+  </tr>
+</thead>
+<tbody>
+  <% UserJogo.all.each do |userj| %>
+    <% if(userj.user_id== @user.id)%>
+    <% Jogo.all.each do |jg| %>
+    <tr>
+      <% if(userj.jogo_id==jg.id)%>
+          <td><%= jg.nome%></td>
+          <td><%= jg.console.nome%></td>
+      <% end %>
+    </tr>
+  
+  <% end %>  
+  <% end %>
+  <% end %>
+</tbody>
+</table>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

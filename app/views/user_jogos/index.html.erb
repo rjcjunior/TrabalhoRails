@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Jogos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Jogo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_jogos.each do |user_jogo| %>
+      <tr>
+        <td><%= user_jogo.user_id %></td>
+        <td><%= user_jogo.jogo_id %></td>
+        <td><%= link_to 'Show', user_jogo %></td>
+        <td><%= link_to 'Edit', edit_user_jogo_path(user_jogo) %></td>
+        <td><%= link_to 'Destroy', user_jogo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'New User Jogo', new_user_jogo_path %>

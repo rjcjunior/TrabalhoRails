@@ -1,3 +1,3 @@
 class Console < ApplicationRecord
-	has_many :jogos
+	has_many :jogos, dependent: :destroy
 end
