@@ -1,6 +1,6 @@
-<h1>Editing Jogo</h1>
-
+<h1>Editando Jogo</h1>
+<% provide(:title, "Editar jogos") %>
 <%= render 'form', jogo: @jogo %>
 
-<%= link_to 'Show', @jogo %> |
-<%= link_to 'Back', jogos_path %>
+<%= link_to 'Show', @jogo, class:"botao" %> |
+<%= link_to 'Back', jogos_path, class:"botao" %>

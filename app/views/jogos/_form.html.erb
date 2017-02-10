@@ -1,4 +1,4 @@
-
+<% provide(:title, "Formulario usuario") %>
 <%= form_for(jogo) do |f| %>
   <% if jogo.errors.any? %>
     <div id="error_explanation">
@@ -39,6 +39,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"botao"%>
   </div>
 <% end %>

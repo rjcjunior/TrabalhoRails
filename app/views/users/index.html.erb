@@ -1,11 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>Usuario</h1>
+<% provide(:title, "Usuarios") %>
 
-<% if logged_in? %>
-  <h2> Voce esta logado!</h2>
-  <h3>Bem-vindo <%= current_user.nome%></h3>
-<% end %>
+
 
 <table>
   <thead>
@@ -31,10 +29,10 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'Novo Usuario', new_user_path, class:"botao" %>
 
 <% if logged_in? %>
  
-  <%= link_to 'Logout',logout_path, method: :delete %>
+  <%= link_to 'Logout',logout_path, method: :delete, class:"botao" %>
 <% end %>
  

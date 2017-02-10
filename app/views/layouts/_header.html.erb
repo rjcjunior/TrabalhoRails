@@ -1,0 +1,22 @@
+<header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <a><img src="" alt="Logo"></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                
+               <% if logged_in? %>
+                  <li>Bem-vindo <%= current_user.nome%></li>
+                  <li><%= link_to 'Logout',logout_path, method: :delete %></li>
+               <% else%>
+                   <li><%= link_to 'Login', login_path %></li>
+               <% end %>
+               <li><%= link_to 'Consoles', consoles_path %></li>
+               <li><%= link_to 'Jogos', jogos_path %></li>
+               <li><%= link_to 'Usuarios', users_path %></li>
+               <li><%= link_to 'Cadastro de jogo', user_jogos_path %></li>
+            </ul>
+         </div>
+      </nav>
+</header>

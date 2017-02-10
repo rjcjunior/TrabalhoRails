@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, "Console") %>
 <p>
   <strong>Nome:</strong>
   <%= @console.nome %>
@@ -25,5 +25,5 @@
   <%= @console.lancamento %>
 </p>
 
-<%= link_to 'Edit', edit_console_path(@console) %> |
-<%= link_to 'Back', consoles_path %>
+<%= link_to 'Edit', edit_console_path(@console), class:"botao" %> |
+<%= link_to 'Back', consoles_path, class:"botao" %>

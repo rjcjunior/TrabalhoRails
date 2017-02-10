@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, "Usuario") %>
 <p>
   <strong>Nome:</strong>
   <%= @user.nome %>
@@ -34,5 +34,5 @@
 </tbody>
 </table>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', edit_user_path(@user), class:"botao" %> |
+<%= link_to 'Back', users_path, class:"botao" %>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :user_jogos
   get 'sessions/new'
-  
+   root to: "sessions#new"
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

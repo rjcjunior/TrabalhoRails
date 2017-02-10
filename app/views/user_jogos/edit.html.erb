@@ -1,6 +1,6 @@
-<h1>Editing User Jogo</h1>
-
+<h1>Editar jogos de usuario</h1>
+<% provide(:title, "Editar jogos de usuario ") %>
 <%= render 'form', user_jogo: @user_jogo %>
 
-<%= link_to 'Show', @user_jogo %> |
-<%= link_to 'Back', user_jogos_path %>
+<%= link_to 'Show', @user_jogo, class:"botao" %> |
+<%= link_to 'Back', user_jogos_path,class:"botao" %>

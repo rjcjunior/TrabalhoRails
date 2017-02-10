@@ -1,5 +1,5 @@
-<h1>New Console</h1>
+<h1>Novo Console</h1>
+<% provide(:title, "Novo console") %>
+<%= render 'form', console: @console, class:"botao" %>
 
-<%= render 'form', console: @console %>
-
-<%= link_to 'Back', consoles_path %>
+<%= link_to 'Back', consoles_path, class:"botao" %>

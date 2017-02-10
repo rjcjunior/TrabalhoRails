@@ -1,16 +1,24 @@
 <p id="notice"><%= notice %></p>
-
+<% provide(:title, "Mostrar jogo e usuario") %>
 <p>
   <strong>User:</strong>
-  <%= @user_jogo.user_id %>
+  <% User.all.each do |usuario| %>
+    <% if(usuario.id == @user_jogo.user_id)%>
+      <%= usuario.nome%>
+    <% end %>
+  <% end %>
 </p>
 
 <p>
   <strong>Jogo:</strong>
-  <%= @user_jogo.jogo_id %>
+    <% Jogo.all.each do |jogos| %>
+    <% if(jogos.id == @user_jogo.jogo_id)%>
+      <%= jogos.nome%>
+    <% end %>
+  <% end %>
 </p>
 
 
 
-<%= link_to 'Edit', edit_user_jogo_path(@user_jogo) %> |
-<%= link_to 'Back', user_jogos_path %>
+<%= link_to 'Edit', edit_user_jogo_path(@user_jogo), class:"botao" %> |
+<%= link_to 'Back', user_jogos_path, class:"botao" %>

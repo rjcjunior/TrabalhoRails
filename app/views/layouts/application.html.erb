@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project</title>
+    <title><%= yield(:title) %> | Videogames</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,11 @@
   </head>
 
   <body>
-
+    <%= render 'layouts/header' %>
+    <section class="sectiongeral">
     <%= yield %>
+    </section>
+    <%= render 'layouts/footer' %>
+
   </body>
 </html>
