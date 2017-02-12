@@ -2,7 +2,7 @@
 
 
 
-Aplicação rails desenvolvida para o treinamento da IN Junior
+Aplicação rails desenvolvida para o treinamento da IN Junior.
 
 <h2>Objetivo</h2>
 
